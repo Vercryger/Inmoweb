@@ -8,7 +8,7 @@
     	<meta name="description" content="">
     	<meta name="author" content="">
 		<link rel='shortcut icon' href='../images/main.png'>
-    	<title>Inmoweb . Users</title>
+    	<title><g:message code="Users" args="[entityName]" /></title>
 
     	<!-- Bootstrap core CSS -->
     	<link href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css" rel="stylesheet">

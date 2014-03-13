@@ -11,7 +11,7 @@ class UserController {
 	}
 	
 	def list() {
-		redirect(action: "login", params: params)
+		redirect(action: "index", params: params)
 	}
 	
 	def login = {}
@@ -20,8 +20,7 @@ class UserController {
 		def user = User.findByUsernameAndPassword(params.username, params.password)
 		if(user){
 			session.user = user
-			
-			redirect(action:"index")
+			redirect(url: "http://localhost:8080/inmoweb/")
 			flash.message = "Hello ${user.first_name}!"
 			
 		}else{

@@ -9,6 +9,7 @@ class AdressController {
 	def index() {
 		redirect(action: "list")
 	}
+	
 	def auth() {
 		if(!session.user) {
 			redirect(controller:"User", action:"login")
