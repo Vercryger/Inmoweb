@@ -1,53 +1,53 @@
 <%@ page import="org.grateds.inmoweb.User" %>
 <!doctype html>
 <html>
-    <head>
-        <meta name="layout" content="main">
-        <g:set var="entityName" value="ProjectTracker Login" />
-        <title><g:message code="Inmoweb Login" args="[entityName]" /></title>
+	<head>
+      	<meta charset="utf-8">
+    	<link rel='shortcut icon' href='../images/main.png'>
+    	<title><g:message code="Sign In" args="[entityName]" /></title>
+    
+    	<!-- Bootstrap core CSS -->
+    	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	    <!-- Custom styles for this template -->
+    	<link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
     </head>
     <body>
-        <a href="#create-User" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
-        <div class="nav" role="navigation">
-            <ul>
-                <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
-                <li><g:link class="list" action="logout"><g:message code="Logout" args="[entityName]" /></g:link></li>
-            </ul>
-        </div>
-        <div id="create-User" class="content scaffold-create" role="main">
-            <h1><g:message code="Sign in" /></h1>
-            <g:if test="${flash.message}">
-            <div class="message" role="status">${flash.message}</div>
-            </g:if>
-            <g:hasErrors bean="${UserInstance}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${UserInstance}" var="error">
-                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
-            </g:hasErrors>
-            <g:form action="authenticate" >
-                <fieldset class="form">
-                    <div class="fieldcontain ${hasErrors(bean: UserInstance, field: 'username', 'error')} ">
-                        <label for="username">
-                            <g:message code="User.username.label" default="User Name" />
-                            
-                        </label>
-                        <g:textField name="username" value="${UserInstance?.username}"/>
-                    </div>
-                    
-                    <div class="fieldcontain ${hasErrors(bean: UserInstance, field: 'password', 'error')} ">
-                        <label for="password">
-                            <g:message code="User.password.label" default="Password" />
-                            
-                        </label>
-                        <g:field type="password" name="password" value="${UserInstance?.password}"/>
-                    </div>
-                </fieldset>
-                <fieldset class="buttons">
-                    <g:submitButton name="login" class="save" value="Login" />
-                </fieldset>
-            </g:form>
-        </div>
+        <div class="navbar navbar-inverse navbar-fixed-top" role="main">
+            <div class="container-fluid">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            			<span class="sr-only">Toggle navigation</span>
+           	 			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+            			<span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="http://localhost:8080/inmoweb">Inmoweb</a>
+        		</div>
+      		</div>
+      	</div>
+        <div id="create-User" class="container content scaffold-create">
+	  		<g:form action="authenticate" class="form-signin">
+	  			<center>
+      				<h1>We don't know you..</h1>
+      				<img src="../images/anonymous.gif" class="img-responsive img-circle" alt="Responsive image">
+      				<h2 class="form-signin-heading">Please sign in</h2>
+       			</center>
+               	<fieldset class="form">
+              		<g:textField class="form-control" placeholder="Username" name="username" value="${UserInstance?.username}"/>
+            		<g:field class="form-control" type="password" placeholder="Password" name="password" value="${UserInstance?.password}"/>
+            	</fieldset>
+            	<label class="checkbox">
+        			<input type="checkbox" value="remember-me"> Remember me 
+        		</label>
+               	<fieldset class="buttons">
+                	<g:submitButton name="login" class="save btn btn-lg btn-primary btn-block" value="Login" />
+               	</fieldset>
+               	<h6><a href="/inmoweb/help/login">Need help?</a></h6>
+           	</g:form>
+        </div><!-- /container -->
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
     </body>
 </html>
