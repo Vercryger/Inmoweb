@@ -5,11 +5,10 @@
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-    	<meta name="description" content="">
-    	<meta name="author" content="">
-		<link rel='shortcut icon' href='../images/main.png'>
-    	<title><g:message code="Users" args="[entityName]" /></title>
-
+   		<link rel='shortcut icon' href='../images/main.png'>
+		<g:set var="entityName" value="Users" />
+        <title><g:message code="Users" args="[entityName]" /></title>
+        
     	<!-- Bootstrap core CSS -->
     	<link href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css" rel="stylesheet">
 	 
@@ -83,7 +82,7 @@
                   						<td>${user.first_name}</td>
                   						<td>${user.last_name}</td>
                   						<td>${user.e_mail}</td>
-                  						<td><a href="/inmoweb/user/show/${user.id}">${user.username}</a></td>
+                  						<td><g:link action="show" id="${user.id}">${user.username}</g:link></td>
                   						<td>${user.password}</td>
                 					</tr>
               					</g:each>
@@ -92,15 +91,20 @@
 					</div>
         		</div>
       		</div>
-      		<footer>
-        		<p>&copy; Grateds 2014</p>
-      		</footer>
+ 
 			<!-- Bootstrap core JavaScript
     		================================================== -->
     		<!-- Placed at the end of the document so the pages load faster --> 
     		<script src="../js/karakakas.js" type="text/javascript"></script>
     		<script src="../js/table-sorter.js" type="text/javascript"></script>
     	</div>
+    	<hr>
+		<div class="container">
+      		<footer>
+        		<p>&copy; Grateds 2014</p>
+      		</footer>
+    	</div> <!-- /container -->
     </body>
+     	
 </html>
 

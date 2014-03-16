@@ -24,7 +24,7 @@ class UserController {
 			flash.message = "Hello ${user.first_name}!"
 			
 		}else{
-		flash.message = "Sorry, ${params.first_name}. Please try again."
+		flash.message = "The username or password you entered is incorrect"
 		redirect(action:"login")
 		}
 	}
