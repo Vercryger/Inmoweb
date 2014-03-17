@@ -2,6 +2,8 @@
 
 [Inmoweb](https://github.com/Grateds/Proyecto)- grails version
 
+More info about this grails project: [Info](https://github.com/Vercryger/Inmoweb/blob/master/application.properties).
+
 ##### To run:
 
 	grails> run-app
