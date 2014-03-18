@@ -5,15 +5,15 @@
     	<meta charset="utf-8">
     	<meta http-equiv="X-UA-Compatible" content="IE=edge">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
-   		<link rel='shortcut icon' href='../images/main.png'>
+   	    <g:external dir="images" file="main.png" />
 		<g:set var="entityName" value="Users" />
         <title><g:message code="Users" args="[entityName]" /></title>
         
     	<!-- Bootstrap core CSS -->
-    	<link href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css" rel="stylesheet">
+        <g:external dir="css" file="bootstrap.min.css" />
 	 
     	<!-- Custom styles for this template -->
-		<link href="${resource(dir: 'css', file: 'dashboard.css')}" type="text/css" rel="stylesheet">
+		<g:external dir="css" file="dashboard.css" />
   	</head>
   	<body>
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -91,8 +91,8 @@
 			<!-- Bootstrap core JavaScript
     		================================================== -->
     		<!-- Placed at the end of the document so the pages load faster --> 
-    		<script src="../js/karakakas.js" type="text/javascript"></script>
-    		<script src="../js/table-sorter.js" type="text/javascript"></script>
+            <g:javascript src="karakakas.js"/>
+            <g:javascript src="table-sorter.js"/>
     	</div>
     	<hr>
 		<div class="container">

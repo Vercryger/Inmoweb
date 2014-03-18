@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel='shortcut icon' href='images/main.png'>
-
+    <g:external dir="images" file="main.png" />
+  
     <title>Welcome to Grails</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="${resource(dir: 'css', file: 'bootstrap.min.css')}" type="text/css" rel="stylesheet">
-
+    <g:external dir="css" file="bootstrap.min.css" />
+   
     <!-- Custom styles for this template -->
-    <link href="${resource(dir: 'css', file: 'jumbotron.css')}" type="text/css" rel="stylesheet">
+    <g:external dir="css" file="jumbotron.css" />
 	
   </head>
 
@@ -59,7 +59,7 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+    <g:javascript src="jquery.min.js"/>
+    <g:javascript src="bootstrap.min.js"/>
   </body>
 </html>

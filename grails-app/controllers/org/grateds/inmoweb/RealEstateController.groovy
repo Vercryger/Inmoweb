@@ -4,7 +4,7 @@ import org.grateds.inmoweb.RealEstate;
 
 class RealEstateController {
 	static scaffold = RealEstate
-
+    
 	def beforeInterceptor = [action:this.&auth]
 	
 	def index() {

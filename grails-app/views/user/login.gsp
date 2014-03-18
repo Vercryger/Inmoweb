@@ -3,15 +3,16 @@
 <html>
 	<head>
       	<meta charset="utf-8">
-    	<link rel='shortcut icon' href='../images/main.png'>
+    	<g:external dir="images" file="main.png" />
     	<g:set var="entityName" value="Sign In" />
         <title><g:message code="Sign In" args="[entityName]" /></title>
     	
     	<!-- Bootstrap core CSS -->
-    	<link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+        <g:external dir="css" file="bootstrap.min.css" />
 
 	    <!-- Custom styles for this template -->
-    	<link href="http://getbootstrap.com/examples/signin/signin.css" rel="stylesheet">
+        <g:external dir="css" file="signin.css" />
+        
     </head>
     <body>
         <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -84,7 +85,7 @@
     	<!-- Bootstrap core JavaScript
     	================================================== -->
     	<!-- Placed at the end of the document so the pages load faster -->
-    	<script src="../js/jquery.min.js"></script>
-		<script src="../js/bootstrap.min.js"></script>
+        <g:javascript src="jquery.min.js"/>
+        <g:javascript src="bootstrap.min.js"/>
     </body>
 </html>
