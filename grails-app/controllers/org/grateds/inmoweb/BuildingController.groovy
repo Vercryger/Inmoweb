@@ -4,8 +4,7 @@ import org.grateds.inmoweb.Building;
 
 class BuildingController {
 	static scaffold = Building
-//    def index() { }
-	
+
 	def beforeInterceptor = [action:this.&auth]
 	
 	def index() {

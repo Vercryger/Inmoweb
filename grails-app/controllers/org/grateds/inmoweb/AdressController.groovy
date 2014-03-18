@@ -2,7 +2,6 @@ package org.grateds.inmoweb
 
 class AdressController {
 	static scaffold = Adress
-//    def index() { }
 	
 	def beforeInterceptor = [action:this.&auth]
 	

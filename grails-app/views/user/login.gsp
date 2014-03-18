@@ -18,10 +18,6 @@
       		<div class="container-fluid">
         		<div class="navbar-header">
           			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            			<span class="sr-only">Toggle navigation</span>
-           	 			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
-            			<span class="icon-bar"></span>
           			</button>
           			<a class="navbar-brand" href="/inmoweb">Inmoweb</a>
         		</div>
@@ -37,7 +33,7 @@
 	  			<center>
       				<h1>We don't know you..</h1>
       				<g:img dir="images" file="anonymous.gif" width="125" height="125" class="img-responsive img-circle" alt="Responsive image"/>
-      				<h2 class="form-signin-heading">Please sign in</h2>
+      				
        			</center>
             	<g:hasErrors bean="${UserInstance}">
             		<ul class="errors" role="alert">
@@ -64,7 +60,7 @@
         			<input type="checkbox" value="remember-me"> Remember me 
         		</label>
                	<fieldset class="buttons">
-                	<g:submitButton name="login" class="save btn btn-lg btn-primary btn-block" value="Login" />
+                	<g:submitButton name="login" class="save btn btn-lg btn-primary btn-block" value="Sign in" />
                	</fieldset>
                	<h6><a href="/inmoweb/help/login">Need help?</a></h6>
            	</g:form>
